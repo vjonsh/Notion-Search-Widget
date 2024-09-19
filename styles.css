@@ -22,18 +22,18 @@ body {
     }
 
     .search-box {
-        background-color: #ffffff; /* 검색창의 배경을 흰색으로 설정 */
+        background-color: #ffffff;
         box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     }
 
     .search-input {
         color: #292929;
-        background-color: #ffffff; /* 텍스트 입력창을 흰색으로 설정 */
+        background-color: #ffffff;
         border: none;
     }
 
     .search-icon {
-        filter: none; /* 다크 모드에서도 아이콘 색상을 그대로 유지 */
+        filter: none;
     }
 }
 
@@ -50,19 +50,20 @@ body {
 
     .search-input {
         color: #292929;
-        background-color: #ffffff; /* 텍스트 입력창을 흰색으로 설정 */
+        background-color: #ffffff;
         border: none;
     }
 
     .search-icon {
-        filter: none; /* 라이트 모드에서도 아이콘 색상을 그대로 유지 */
+        filter: none;
     }
 }
 
 .search-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;  /* 검색 박스들 사이의 간격을 10px로 설정 */
+    padding: 20px;
 }
 
 .search-box {
@@ -70,17 +71,17 @@ body {
     align-items: center;
     border-radius: 30px;
     padding: 10px;
-    max-width: 400px;
     width: 100%;
+    max-width: 600px;  /* 최대 폭을 설정 */
     background-color: #ffffff;
 }
 
 .search-box.naver {
-    border: 1px solid #03c75a; /* 네이버 검색창 외각선 */
+    border: 1px solid #03c75a;
 }
 
 .search-box.google {
-    border: 1px solid #4285f4; /* 구글 검색창 외각선 */
+    border: 1px solid #4285f4;
 }
 
 .logo {
@@ -104,17 +105,28 @@ body {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 320px) {
+@media (max-width: 768px) {
     .search-box {
-        max-width: 300px;
+        max-width: 100%;  /* 최대 폭을 화면 너비에 맞게 설정 */
     }
 
     .search-input {
-        font-size: 1em;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        max-width: 100%;
+        padding: 8px;
     }
 
     .logo, .search-icon {
         width: 30px;
         height: 30px;
+    }
+
+    .search-input {
+        font-size: 1em;
     }
 }

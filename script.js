@@ -14,11 +14,13 @@ function performSearch(platform) {
         query = document.getElementById("naver-search").value;
         if (query) {
             searchUrl = `https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=${encodeURIComponent(query)}`;
+            document.getElementById("naver-search").value = "";  // 검색 후 텍스트박스 초기화
         }
     } else if (platform === "google") {
         query = document.getElementById("google-search").value;
         if (query) {
             searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            document.getElementById("google-search").value = "";  // 검색 후 텍스트박스 초기화
         }
     }
 
