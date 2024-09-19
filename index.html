@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 위젯</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="search-box naver">
+            <img src="img/네이버 로고.svg" alt="네이버 로고" class="logo">
+            <input type="text" id="naver-search" placeholder="네이버에서 검색" class="search-input" onkeydown="checkEnter(event, 'naver')">
+            <img src="img/Search_Icon_n.png" alt="검색 아이콘" class="search-icon" onclick="performSearch('naver')">
+        </div>
+        
+        <div class="search-box google">
+            <img src="img/Google%20(logo).svg" alt="구글 로고" class="logo">
+            <input type="text" id="google-search" placeholder="구글에서 검색" class="search-input" onkeydown="checkEnter(event, 'google')">
+            <img src="img/Search_Icon_g.png" alt="검색 아이콘" class="search-icon" onclick="performSearch('google')">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
